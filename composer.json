@@ -1,4 +1,6 @@
 {
+    "description": "brain-games",
+    "license": "proprietary",
     "name": "hexlet/code",
     "autoload": {
         "psr-4": {
