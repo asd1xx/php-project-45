@@ -22,17 +22,18 @@ function even()
         
         if (($rand % 2 === 0 && $answer === 'yes') || ($rand % 2 !== 0 && $answer === 'no')) {
             line('Correct!');
-        }
-    
-        if ($rand % 2 !== 0 && $answer === 'yes') {
+        } elseif ($rand % 2 !== 0 && $answer === 'yes') {
             line("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {$name}!");
             break;
         } elseif ($rand % 2 === 0 && $answer === 'no') {
             line("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {$name}!");
             break;
+        } elseif ($answer !== 'yes' || $answer !== 'no') {
+            line("ERROR\nLet's try again, {$name}!");
+            break;
         }
     }
-    
+
     if ($i > 3) {
         line("Congratulations, {$name}!");
     }
