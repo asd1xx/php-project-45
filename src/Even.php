@@ -29,7 +29,7 @@ function even()
             line("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {$name}!");
             break;
         } elseif ($answer !== 'yes' || $answer !== 'no') {
-            line("ERROR\nLet's try again, {$name}!");
+            line("Need to answer 'yes' or 'no'\nLet's try again, {$name}!");
             break;
         }
     }
