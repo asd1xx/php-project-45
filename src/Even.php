@@ -19,7 +19,6 @@ function even()
         $rand = mt_rand(1, 15);
         line("Question: {$rand}");
         $answer = mb_strtolower(prompt('Your answer'));
-        
         if (($rand % 2 === 0 && $answer === 'yes') || ($rand % 2 !== 0 && $answer === 'no')) {
             line('Correct!');
         } elseif ($rand % 2 !== 0 && $answer === 'yes') {
