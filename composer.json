@@ -6,7 +6,8 @@
         "files": [
             "src/Cli.php",
             "src/Games/Even.php",
-            "src/Games/Calc.php"
+            "src/Games/Calc.php",
+            "src/Engine.php"
         ]
     },
     "require": {
