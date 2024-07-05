@@ -3,4 +3,4 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/475debc79e4bc29ba228/maintainability)](https://codeclimate.com/github/asd1xx/php-project-45/maintainability)
 
 Игра "Проверка на чётность"
-[![asciicast](https://asciinema.org/a/eAYjMuM5eWXdzCMYw5oxVNEa1.svg)](https://asciinema.org/a/eAYjMuM5eWXdzCMYw5oxVNEa1)
+[![asciicast](https://asciinema.org/a/LovNTsopp8sy4vUiSJ7VQtVIm.svg)](https://asciinema.org/a/LovNTsopp8sy4vUiSJ7VQtVIm)
