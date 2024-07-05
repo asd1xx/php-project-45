@@ -16,7 +16,7 @@ function calc()
     line('What is the result of the expression?');
     $operators = ['+', '-', '*'];
 
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $operandOne = mt_rand(1, 15);
         $operandTwo = mt_rand(1, 15);
         $key = array_rand($operators);
@@ -33,7 +33,7 @@ function calc()
         }
     }
 
-    if ($i > 3) {
+    if ($i === 3) {
         line("Congratulations, {$name}!");
     }
 }

@@ -15,7 +15,7 @@ function even()
     // Старт игры "Проверка на чётность"
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $rand = mt_rand(1, 15);
         line("Question: {$rand}");
         $answer = mb_strtolower(prompt('Your answer'));
@@ -33,7 +33,7 @@ function even()
         }
     }
 
-    if ($i > 3) {
+    if ($i === 3) {
         line("Congratulations, {$name}!");
     }
 }
