@@ -1,6 +1,6 @@
 <?php
 
-namespace Project\Src;
+namespace Project\Src\Games;
 
 use function cli\line;
 use function cli\prompt;
