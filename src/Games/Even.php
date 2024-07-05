@@ -4,13 +4,11 @@ namespace Project\Src\Games;
 
 use function cli\line;
 use function cli\prompt;
+use function Project\Src\userName;
 
 function even()
 {
-    // Знакомство
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
-    line("Hello, {$name}!");
+    $name = userName();
 
     // Старт игры "Проверка на чётность"
     line('Answer "yes" if the number is even, otherwise answer "no".');
