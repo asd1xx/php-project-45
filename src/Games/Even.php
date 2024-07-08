@@ -2,36 +2,17 @@
 
 namespace Project\Src\Games;
 
-use function cli\line;
-use function cli\prompt;
-use function Project\Src\userName;
+use function Project\Src\engine;
 
 function even()
 {
-    $name = userName();
+    $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $getQuestion = function() {
+        $question = mt_rand(1, 15);
+        $correctAnswer = $question % 2 === 0 ? 'yes' : 'no';
 
-    // Старт игры "Проверка на чётность"
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+        return [$question, $correctAnswer];
+    };
 
-    for ($i = 0; $i < 3; $i++) {
-        $rand = mt_rand(1, 15);
-        line("Question: {$rand}");
-        $answer = mb_strtolower(prompt('Your answer'));
-        if (($rand % 2 === 0 && $answer === 'yes') || ($rand % 2 !== 0 && $answer === 'no')) {
-            line('Correct!');
-        } elseif ($rand % 2 !== 0 && $answer === 'yes') {
-            line("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, {$name}!");
-            break;
-        } elseif ($rand % 2 === 0 && $answer === 'no') {
-            line("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, {$name}!");
-            break;
-        } elseif ($answer !== 'yes' || $answer !== 'no') {
-            line("Need to answer 'yes' or 'no'\nLet's try again, {$name}!");
-            break;
-        }
-    }
-
-    if ($i === 3) {
-        line("Congratulations, {$name}!");
-    }
+    engine($rules, $getQuestion);
 }
