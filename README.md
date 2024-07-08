@@ -14,13 +14,13 @@
 1. Клонируйте репозиторий:
     
     ```bash
-    git clone git@github.com:asd1xx/php-project-45.git braingames
+    git clone git@github.com:asd1xx/php-project-45.git brain-games
     ```
     
 2. Перейдите в директорию проекта:
     
     ```bash
-    cd php-project-45
+    cd brain-games
     ```
     
 3. Установите зависимости:
