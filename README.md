@@ -42,6 +42,7 @@
 
 - `make brain-even` — запуск игры "Проверка на четность".
 - `make brain-calc` — запуск игры "Калькулятор".
+- `make brain-gcd` — запуск игры "Наибольший общий делитель".
 
 
 ## Демонстрации мини-игр
@@ -52,3 +53,6 @@
 
 ### Игра "Калькулятор"
 [![asciicast](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn.svg)](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn)
+
+### Игра "Наибольший общий делитель"
+[![asciicast](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33.svg)](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33)
