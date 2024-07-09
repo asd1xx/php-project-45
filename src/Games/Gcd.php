@@ -9,12 +9,12 @@ use function Project\Src\engine;
      * @param int $num1
      * @param int $num2
      * и определяет наибольший общий делитель
-     * 
+     *
      * @return int наибольший общий делитель двух чисел
      */
 function getGcd(int $num1, int $num2)
 {
-    while ($num2 !== 0){
+    while ($num2 !== 0) {
         $temp = $num1 % $num2;
         $num1 = $num2;
         $num2 = $temp;
@@ -28,13 +28,13 @@ function getGcd(int $num1, int $num2)
      * Суть игры в следующем: пользователю показывается
      * два случайных числа от 1 до 15, например, 14 5.
      * Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
-     * 
+     *
      * @return callable and calling the engine() function
      */
 function gcd()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
-    $getQuestion = function() {
+    $getQuestion = function () {
         $randOne = mt_rand(1, 15);
         $randTwo = mt_rand(1, 15);
         $question = "$randOne $randTwo";

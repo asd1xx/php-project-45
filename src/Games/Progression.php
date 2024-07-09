@@ -8,7 +8,7 @@ use function Project\Src\engine;
      * Функция для получения арифметической прогрессии.
      * $a - первое случайное число прогрессии от 1 до 100.
      * $d - случайный шаг прогрессии от 2 до 10.
-     * 
+     *
      * @return array возвращает массив с арифметической прогрессией
      */
 function getProgression()
@@ -29,13 +29,13 @@ function getProgression()
      * Суть игры в следующем: пользователю показывается ряд чисел, образующих
      * арифметическую прогрессию, заменив любое из чисел двумя точками.
      * Игрок должен определить это число.
-     * 
+     *
      * @return callable and calling the engine() function
      */
 function progression()
 {
     $rules = 'What number is missing in the progression?';
-    $getQuestion = function() {
+    $getQuestion = function () {
         $array = getProgression();
         $randIndex = array_rand($array);
         $correctAnswer = (string) $array[$randIndex];

@@ -11,7 +11,7 @@ use function cli\prompt;
      * @param callable $getQuestion
      * Принимает аргумент $rules с правилами игры.
      * Принимает функцию обратного вызова $getQuestion
-     * 
+     *
      * @return string возвращает результат игры
      */
 function engine(string $rules, callable $getQuestion)

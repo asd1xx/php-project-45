@@ -6,8 +6,8 @@ use function Project\Src\engine;
 
     /**
      * Функция принимает число и определяет является ли число простым.
-     * @param $number
-     * 
+     * @param int $number
+     *
      * @return string 'yes' или 'no'
      */
 function isPrime($number)
@@ -27,13 +27,13 @@ function isPrime($number)
      * Нужно ответить является ли число простым.
      * yes - число является простым.
      * no - число не является простым.
-     * 
+     *
      * @return callable and calling the engine() function
      */
 function prime()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $getQuestion = function() {
+    $getQuestion = function () {
         $question = mt_rand(1, 100);
         $correctAnswer = isPrime($question);
 
