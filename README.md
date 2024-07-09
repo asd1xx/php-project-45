@@ -29,7 +29,7 @@
     make install
     ```
     
-4. Добавляем права на исполнение файлов в директории `bin`:
+4. Добавляем права на исполнение файлов в директории bin:
     
     ```bash
     chmod +x ./bin/*
@@ -43,6 +43,7 @@
 - `make brain-calc` — запуск игры "Калькулятор".
 - `make brain-gcd` — запуск игры "Наибольший общий делитель".
 - `make brain-progression` — запуск игры "Арифметическая прогрессия".
+- `make brain-prime` — запуск игры "Простое ли число?".
 
 ## Демонстрация игр
 
@@ -57,3 +58,6 @@
 
 ### Игра "Арифметическая прогрессия"
 [![asciicast](https://asciinema.org/a/vykpzNDyEdH8tR3t6uBTCQUOO.svg)](https://asciinema.org/a/vykpzNDyEdH8tR3t6uBTCQUOO)
+
+### Игра "Простое ли число?"
+[![asciicast](https://asciinema.org/a/x3gdcxl03utfHQYtZBT0YlPBp.svg)](https://asciinema.org/a/x3gdcxl03utfHQYtZBT0YlPBp)
