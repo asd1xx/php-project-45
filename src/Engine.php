@@ -12,7 +12,7 @@ use function cli\prompt;
  * Принимает аргумент $rules с правилами игры.
  * Принимает функцию обратного вызова $getQuestion.
  *
- * @return void возвращает результат игры
+ * @return void
  */
 function engine(string $rules, callable $getQuestion)
 {
