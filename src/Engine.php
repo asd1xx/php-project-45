@@ -5,15 +5,15 @@ namespace Project\Src;
 use function cli\line;
 use function cli\prompt;
 
-    /**
-     * Общая логика игр реализована в функции engine.
-     * @param string $rules
-     * @param callable $getQuestion
-     * Принимает аргумент $rules с правилами игры.
-     * Принимает функцию обратного вызова $getQuestion
-     *
-     * @return string возвращает результат игры
-     */
+/**
+ * Общая логика игр реализована в функции engine.
+ * @param string $rules
+ * @param callable $getQuestion
+ * Принимает аргумент $rules с правилами игры.
+ * Принимает функцию обратного вызова $getQuestion.
+ *
+ * @return string возвращает результат игры
+ */
 function engine(string $rules, callable $getQuestion)
 {
     line('Welcome to the Brain Games!');
