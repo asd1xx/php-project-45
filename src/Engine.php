@@ -12,7 +12,7 @@ use function cli\prompt;
  * Принимает аргумент $rules с правилами игры.
  * Принимает функцию обратного вызова $getQuestion.
  *
- * @return string возвращает результат игры
+ * @return void возвращает результат игры
  */
 function engine(string $rules, callable $getQuestion)
 {
@@ -33,7 +33,5 @@ function engine(string $rules, callable $getQuestion)
         }
     }
 
-    if ($i === 3) {
-        line("Congratulations, {$userName}!");
-    }
+    line("Congratulations, {$userName}!");
 }
