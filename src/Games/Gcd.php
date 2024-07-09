@@ -4,6 +4,14 @@ namespace Project\Src\Games;
 
 use function Project\Src\engine;
 
+    /**
+     * Функция принимает два числа
+     * @param int $num1
+     * @param int $num2
+     * и определяет наибольший общий делитель
+     * 
+     * @return int наибольший общий делитель двух чисел
+     */
 function getGcd(int $num1, int $num2)
 {
     while ($num2 !== 0){
@@ -15,6 +23,14 @@ function getGcd(int $num1, int $num2)
     return (string) $num1;
 }
 
+    /**
+     * Игра "Наибольший общий делитель".
+     * Суть игры в следующем: пользователю показывается
+     * два случайных числа от 1 до 15, например, 14 5.
+     * Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
+     * 
+     * @return callable and calling the engine() function
+     */
 function gcd()
 {
     $rules = 'Find the greatest common divisor of given numbers.';

@@ -4,6 +4,13 @@ namespace Project\Src\Games;
 
 use function Project\Src\engine;
 
+    /**
+     * Функция для получения арифметической прогрессии.
+     * $a - первое случайное число прогрессии от 1 до 100.
+     * $d - случайный шаг прогрессии от 2 до 10.
+     * 
+     * @return array возвращает массив с арифметической прогрессией
+     */
 function getProgression()
 {
     $a = mt_rand(1, 100);
@@ -17,6 +24,14 @@ function getProgression()
     return $arr;
 }
 
+    /**
+     * Игра "Арифметическая прогрессия".
+     * Суть игры в следующем: пользователю показывается ряд чисел, образующих
+     * арифметическую прогрессию, заменив любое из чисел двумя точками.
+     * Игрок должен определить это число.
+     * 
+     * @return callable and calling the engine() function
+     */
 function progression()
 {
     $rules = 'What number is missing in the progression?';
