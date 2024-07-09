@@ -56,3 +56,6 @@
 
 ### Игра "Наибольший общий делитель"
 [![asciicast](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33.svg)](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33)
+
+### Игра "Арифметическая прогрессия"
+[![asciicast](https://asciinema.org/a/vykpzNDyEdH8tR3t6uBTCQUOO.svg)](https://asciinema.org/a/vykpzNDyEdH8tR3t6uBTCQUOO)
