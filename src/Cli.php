@@ -5,6 +5,11 @@ namespace Project\Src;
 use function cli\line;
 use function cli\prompt;
 
+/**
+ * Тестовая функция для знакомства с игроком.
+ *
+ * @return void
+ */
 function welcome()
 {
     line('Welcome to the Brain Games!');
