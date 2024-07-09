@@ -49,7 +49,7 @@
 ## Демонстрация игр
 
 ### Игра "Проверка на чётность"
-[![asciicast](https://asciinema.org/a/LovNTsopp8sy4vUiSJ7VQtVIm.svg)](https://asciinema.org/a/LovNTsopp8sy4vUiSJ7VQtVIm)
+[![asciicast](https://asciinema.org/a/MgY7iGosUPEN0INb1ukYHACzb.svg)](https://asciinema.org/a/MgY7iGosUPEN0INb1ukYHACzb)
 
 ### Игра "Калькулятор"
 [![asciicast](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn.svg)](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn)
