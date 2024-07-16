@@ -4,6 +4,12 @@ namespace App\Games\Progression;
 
 use function App\Engine\engine;
 
+const MIN = 1;
+const MAX = 100;
+const MIN_STEP = 2;
+const MAX_STEP = 10;
+const SIZE = 10;
+
 /**
  * Функция для получения арифметической прогрессии.
  * $a - первое случайное число прогрессии от 1 до 100.
@@ -13,11 +19,11 @@ use function App\Engine\engine;
  */
 function getProgression()
 {
-    $a = mt_rand(1, 100);
-    $d = mt_rand(2, 10);
+    $a = mt_rand(MIN, MAX);
+    $d = mt_rand(MIN_STEP, MAX_STEP);
     $arr = [$a];
 
-    for ($i = 1; $i < 10; $i++) {
+    for ($i = 1; $i < SIZE; $i++) {
         $arr[$i] = $arr[$i - 1] + $d;
     }
 
