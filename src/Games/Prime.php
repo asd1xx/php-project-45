@@ -4,6 +4,9 @@ namespace App\Games\Prime;
 
 use function App\Engine\engine;
 
+const MIN = 1;
+const MAX = 15;
+
 /**
  * Функция принимает число и определяет является ли число простым.
  * @param int $number
@@ -27,7 +30,7 @@ function isPrime(int $number)
 
 /**
  * Игра "Простое ли число?".
- * Суть игры в следующем: пользователю показывается рандомное число от 1 до 100.
+ * Суть игры в следующем: пользователю показывается рандомное число от 1 до 15.
  * Нужно ответить является ли число простым.
  * yes - число является простым.
  * no - число не является простым.
@@ -38,7 +41,7 @@ function prime()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getQuestion = function () {
-        $question = mt_rand(1, 100);
+        $question = mt_rand(MIN, MAX);
         $correctAnswer = isPrime($question);
 
         return [$question, $correctAnswer];
