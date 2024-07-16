@@ -22,9 +22,9 @@ function makeCalc(int $num1, int $num2, $operator): int
             return $num1 + $num2;
         case '-':
             return $num1 - $num2;
-        case '*':
-            return $num1 * $num2;
     }
+
+    return $num1 * $num2;
 }
 
 /**
