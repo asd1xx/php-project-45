@@ -23,12 +23,16 @@ function engine(string $rules, callable $getQuestion): void
     line("Hello, {$userName}!");
     line($rules);
 
+    $countCorrectAnswers = 0;
+
     for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
         [$question, $correctAnswer] = $getQuestion();
         line("Question: {$question}");
         $answer = mb_strtolower(prompt('Your answer'));
+
         if ($correctAnswer === $answer) {
             line('Correct!');
+            $countCorrectAnswers++;
         } else {
             $isWrong = "'%s' is wrong answer ;(. Correct answer was '%s'.\n";
             $tryAgain = "Let's try again, %s!\n";
@@ -38,7 +42,7 @@ function engine(string $rules, callable $getQuestion): void
         }
     }
 
-    if ($i === COUNT_QUESTIONS) {
+    if ($countCorrectAnswers === COUNT_QUESTIONS) {
         line("Congratulations, {$userName}!");
     }
 }
