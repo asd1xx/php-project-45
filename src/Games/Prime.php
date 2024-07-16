@@ -12,7 +12,11 @@ use function App\Engine\engine;
  */
 function isPrime(int $number)
 {
-    for ($i = 2; $i < $number; $i++) {
+    if ($number < 2) {
+        return 'no';
+    }
+
+    for ($i = 2; $i <= $number / 2; $i++) {
         if ($number % $i === 0) {
             return 'no';
         }
