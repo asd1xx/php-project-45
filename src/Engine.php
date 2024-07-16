@@ -28,10 +28,15 @@ function engine(string $rules, callable $getQuestion)
         if ($correctAnswer === $answer) {
             line('Correct!');
         } else {
-            line("'{$answer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$userName}!");
+            $isWrong = "'%s' is wrong answer ;(. Correct answer was '%s'.\n";
+            $tryAgain = "Let's try again, %s!\n";
+            echo sprintf($isWrong, $answer, $correctAnswer);
+            echo sprintf($tryAgain, $userName);
             break;
         }
     }
 
-    line("Congratulations, {$userName}!");
+    if ($i === 3) {
+        line("Congratulations, {$userName}!");
+    }
 }
