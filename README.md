@@ -55,10 +55,10 @@
 ## Демонстрация игр
 
 ### Игра "Проверка на чётность"
-[![asciicast](https://asciinema.org/a/MgY7iGosUPEN0INb1ukYHACzb.svg)](https://asciinema.org/a/MgY7iGosUPEN0INb1ukYHACzb)
+[![asciicast](https://asciinema.org/a/ltTsFHnkL1wHUJvxZq05NFEpo.svg)](https://asciinema.org/a/ltTsFHnkL1wHUJvxZq05NFEpo)
 
 ### Игра "Калькулятор"
-[![asciicast](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn.svg)](https://asciinema.org/a/ylvaYp3XQW6hUzoHipkKFoAXn)
+[![asciicast](https://asciinema.org/a/4eQztDAXxi4yYsmH98Tiw50VJ.svg)](https://asciinema.org/a/4eQztDAXxi4yYsmH98Tiw50VJ)
 
 ### Игра "Наибольший общий делитель"
 [![asciicast](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33.svg)](https://asciinema.org/a/acqELJ4dL3Cg8uV5QdhJCEX33)
