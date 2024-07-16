@@ -4,6 +4,9 @@ namespace App\Games\Calc;
 
 use function App\Engine\engine;
 
+const MIN = 1;
+const MAX = 15;
+
 /**
  * Игра "Калькулятор".
  * Суть игры в следующем: пользователю показывается случайное
@@ -17,8 +20,8 @@ function calc()
     $rules = 'What is the result of the expression?';
     $getQuestion = function () {
         $operators = ['+', '-', '*'];
-        $randOne = mt_rand(1, 15);
-        $randTwo = mt_rand(1, 15);
+        $randOne = mt_rand(MIN, MAX);
+        $randTwo = mt_rand(MIN, MAX);
         $key = array_rand($operators);
         $randOperator = $operators[$key];
         $question = "$randOne $randOperator $randTwo";
