@@ -5,6 +5,8 @@ namespace App\Engine;
 use function cli\line;
 use function cli\prompt;
 
+const COUNT_QUESTIONS = 3;
+
 /**
  * Общая логика игр реализована в функции engine.
  * @param string $rules
@@ -21,7 +23,7 @@ function engine(string $rules, callable $getQuestion)
     line("Hello, {$userName}!");
     line($rules);
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
         [$question, $correctAnswer] = $getQuestion();
         line("Question: {$question}");
         $answer = mb_strtolower(prompt('Your answer'));
@@ -36,7 +38,7 @@ function engine(string $rules, callable $getQuestion)
         }
     }
 
-    if ($i === 3) {
+    if ($i === COUNT_QUESTIONS) {
         line("Congratulations, {$userName}!");
     }
 }
