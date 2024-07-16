@@ -13,17 +13,20 @@ const MAX = 15;
  * @param int $num2
  * @param string $operator
  *
- * @return int возвращает результат выражения в строке
+ * @return int возвращает результат выражения
  */
 function makeCalc(int $num1, int $num2, $operator): int
 {
     switch ($operator) {
         case '+':
             $result = $num1 + $num2;
+            break;
         case '-':
             $result = $num1 - $num2;
+            break;
         case '*':
             $result = $num1 * $num2;
+            break;
     }
 
     return $result;
