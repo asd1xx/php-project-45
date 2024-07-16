@@ -17,7 +17,7 @@ const SIZE = 10;
  *
  * @return array возвращает массив с арифметической прогрессией
  */
-function getProgression()
+function getProgression(): array
 {
     $a = mt_rand(MIN, MAX);
     $d = mt_rand(MIN_STEP, MAX_STEP);

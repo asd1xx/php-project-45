@@ -14,7 +14,7 @@ const MAX = 15;
  *
  * @return string возвращает строку с наибольшим общим делителем двух чисел
  */
-function getGcd(int $num1, int $num2)
+function getGcd(int $num1, int $num2): string
 {
     while ($num2 !== 0) {
         $temp = $num1 % $num2;

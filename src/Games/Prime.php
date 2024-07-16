@@ -13,7 +13,7 @@ const MAX = 15;
  *
  * @return string возвращает строку 'yes' или 'no'
  */
-function isPrime(int $number)
+function isPrime(int $number): string
 {
     if ($number < 2) {
         return 'no';

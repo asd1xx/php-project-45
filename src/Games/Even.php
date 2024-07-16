@@ -13,7 +13,7 @@ const MAX = 15;
  *
  * @return string возвращает строку 'yes' или 'no'
  */
-function isEven(int $number)
+function isEven(int $number): string
 {
     return $number % 2 === 0 ? 'yes' : 'no';
 }
