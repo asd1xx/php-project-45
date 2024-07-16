@@ -13,9 +13,9 @@ const MAX = 15;
  * @param int $num2
  * @param string $operator
  *
- * @return string возвращает результат выражения в строке
+ * @return int возвращает результат выражения в строке
  */
-function makeCalc(int $num1, int $num2, $operator): string
+function makeCalc(int $num1, int $num2, $operator): int
 {
     switch ($operator) {
         case '+':
@@ -47,7 +47,7 @@ function calc()
         $key = array_rand($operators);
         $randOperator = $operators[$key];
         $question = "$randOne $randOperator $randTwo";
-        $correctAnswer = makeCalc($randOne, $randTwo, $randOperator);
+        $correctAnswer = (string) makeCalc($randOne, $randTwo, $randOperator);
 
         return [$question, $correctAnswer];
     };
