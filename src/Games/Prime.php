@@ -1,8 +1,8 @@
 <?php
 
-namespace Project\Src\Games;
+namespace App\Games\Prime;
 
-use function Project\Src\engine;
+use function App\Engine\engine;
 
 /**
  * Функция принимает число и определяет является ли число простым.

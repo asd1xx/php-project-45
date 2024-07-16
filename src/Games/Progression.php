@@ -1,8 +1,8 @@
 <?php
 
-namespace Project\Src\Games;
+namespace App\Games\Progression;
 
-use function Project\Src\engine;
+use function App\Engine\engine;
 
 /**
  * Функция для получения арифметической прогрессии.

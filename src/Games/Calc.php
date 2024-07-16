@@ -1,8 +1,8 @@
 <?php
 
-namespace Project\Src\Games;
+namespace App\Games\Calc;
 
-use function Project\Src\engine;
+use function App\Engine\engine;
 
 /**
  * Игра "Калькулятор".

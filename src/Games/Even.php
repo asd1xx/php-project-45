@@ -1,8 +1,8 @@
 <?php
 
-namespace Project\Src\Games;
+namespace App\Games\Even;
 
-use function Project\Src\engine;
+use function App\Engine\engine;
 
 /**
  * Игра "Проверка на чётность".

@@ -1,8 +1,8 @@
 <?php
 
-namespace Project\Src\Games;
+namespace App\Games\Gcd;
 
-use function Project\Src\engine;
+use function App\Engine\engine;
 
 /**
  * Функция принимает два числа и определяет наибольший общий делитель.
