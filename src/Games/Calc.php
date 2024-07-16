@@ -19,17 +19,12 @@ function makeCalc(int $num1, int $num2, $operator): int
 {
     switch ($operator) {
         case '+':
-            $result = $num1 + $num2;
-            break;
+            return $num1 + $num2;
         case '-':
-            $result = $num1 - $num2;
-            break;
+            return $num1 - $num2;
         case '*':
-            $result = $num1 * $num2;
-            break;
+            return $num1 * $num2;
     }
-
-    return $result;
 }
 
 /**
