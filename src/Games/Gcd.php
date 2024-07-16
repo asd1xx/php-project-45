@@ -4,6 +4,9 @@ namespace App\Games\Gcd;
 
 use function App\Engine\engine;
 
+const MIN = 1;
+const MAX = 15;
+
 /**
  * Функция принимает два числа и определяет наибольший общий делитель.
  * @param int $num1
@@ -34,8 +37,8 @@ function gcd()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
     $getQuestion = function () {
-        $randOne = mt_rand(1, 15);
-        $randTwo = mt_rand(1, 15);
+        $randOne = mt_rand(MIN, MAX);
+        $randTwo = mt_rand(MIN, MAX);
         $question = "$randOne $randTwo";
         $correctAnswer = getGcd($randOne, $randTwo);
 
