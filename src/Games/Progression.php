@@ -2,7 +2,7 @@
 
 namespace App\Games\Progression;
 
-use function App\Engine\engine;
+use function App\Engine\runGame;
 
 const MIN = 1;
 const MAX = 100;
@@ -38,7 +38,7 @@ function getProgression(): array
  *
  * @return void and calling the engine() function
  */
-function progression()
+function runProgression()
 {
     $rules = 'What number is missing in the progression?';
     $getQuestion = function () {
@@ -51,5 +51,5 @@ function progression()
         return [$question, $correctAnswer];
     };
 
-    engine($rules, $getQuestion);
+    runGame($rules, $getQuestion);
 }

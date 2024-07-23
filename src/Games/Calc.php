@@ -2,7 +2,7 @@
 
 namespace App\Games\Calc;
 
-use function App\Engine\engine;
+use function App\Engine\runGame;
 
 const MIN = 1;
 const MAX = 15;
@@ -35,7 +35,7 @@ function makeCalc(int $num1, int $num2, $operator): int
  *
  * @return void and calling the engine() function
  */
-function calc()
+function runCalc()
 {
     $rules = 'What is the result of the expression?';
     $getQuestion = function () {
@@ -50,5 +50,5 @@ function calc()
         return [$question, $correctAnswer];
     };
 
-    engine($rules, $getQuestion);
+    runGame($rules, $getQuestion);
 }

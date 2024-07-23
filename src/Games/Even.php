@@ -2,7 +2,7 @@
 
 namespace App\Games\Even;
 
-use function App\Engine\engine;
+use function App\Engine\runGame;
 
 const MIN = 1;
 const MAX = 15;
@@ -25,7 +25,7 @@ function isEven(int $number): string
  *
  * @return void and calling the engine() function
  */
-function even()
+function runEven()
 {
     $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
     $getQuestion = function () {
@@ -35,5 +35,5 @@ function even()
         return [$question, $correctAnswer];
     };
 
-    engine($rules, $getQuestion);
+    runGame($rules, $getQuestion);
 }

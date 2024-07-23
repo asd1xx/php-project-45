@@ -16,7 +16,7 @@ const COUNT_QUESTIONS = 3;
  *
  * @return void
  */
-function engine(string $rules, callable $getQuestion): void
+function runGame(string $rules, callable $getQuestion): void
 {
     line('Welcome to the Brain Games!');
     $userName = prompt('May I have your name?');

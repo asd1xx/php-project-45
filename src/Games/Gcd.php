@@ -2,7 +2,7 @@
 
 namespace App\Games\Gcd;
 
-use function App\Engine\engine;
+use function App\Engine\runGame;
 
 const MIN = 1;
 const MAX = 15;
@@ -33,7 +33,7 @@ function getGcd(int $num1, int $num2): string
  *
  * @return void and calling the engine() function
  */
-function gcd()
+function runGcd()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
     $getQuestion = function () {
@@ -45,5 +45,5 @@ function gcd()
         return [$question, $correctAnswer];
     };
 
-    engine($rules, $getQuestion);
+    runGame($rules, $getQuestion);
 }

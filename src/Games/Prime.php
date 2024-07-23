@@ -2,7 +2,7 @@
 
 namespace App\Games\Prime;
 
-use function App\Engine\engine;
+use function App\Engine\runGame;
 
 const MIN = 1;
 const MAX = 15;
@@ -37,7 +37,7 @@ function isPrime(int $number): string
  *
  * @return void and calling the engine() function
  */
-function prime()
+function runPrime()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getQuestion = function () {
@@ -47,5 +47,5 @@ function prime()
         return [$question, $correctAnswer];
     };
 
-    engine($rules, $getQuestion);
+    runGame($rules, $getQuestion);
 }
