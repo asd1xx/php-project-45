@@ -6,6 +6,8 @@ use function cli\line;
 use function cli\prompt;
 
 const COUNT_QUESTIONS = 3;
+const MIN_RANDOM_NUMBER = 1;
+const MAX_RANDOM_NUMBER = 15;
 
 /**
  * Общая логика игр реализована в функции engine.

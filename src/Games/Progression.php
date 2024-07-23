@@ -3,27 +3,27 @@
 namespace App\Games\Progression;
 
 use function App\Engine\runGame;
+use const App\Engine\MIN_RANDOM_NUMBER;
+use const App\Engine\MAX_RANDOM_NUMBER;
 
-const MIN = 1;
-const MAX = 100;
-const MIN_STEP = 2;
-const MAX_STEP = 10;
-const SIZE = 10;
+const MIN_PROGRESSION_STEP = 2;
+const MAX_PROGRESSION_STEP = 10;
+const PROGRESSION_SIZE = 10;
 
 /**
  * Функция для получения арифметической прогрессии из 10 чисел.
- * $a - первое случайное число прогрессии от 1 до 100.
+ * $a - первое случайное число прогрессии от 1 до 15.
  * $d - случайный шаг прогрессии от 2 до 10.
  *
  * @return array возвращает массив с арифметической прогрессией
  */
 function getProgression(): array
 {
-    $a = mt_rand(MIN, MAX);
-    $d = mt_rand(MIN_STEP, MAX_STEP);
+    $a = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+    $d = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
     $arr = [$a];
 
-    for ($i = 1; $i < SIZE; $i++) {
+    for ($i = 1; $i < PROGRESSION_SIZE; $i++) {
         $arr[$i] = $arr[$i - 1] + $d;
     }
 

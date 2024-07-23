@@ -3,9 +3,8 @@
 namespace App\Games\Calc;
 
 use function App\Engine\runGame;
-
-const MIN = 1;
-const MAX = 15;
+use const App\Engine\MIN_RANDOM_NUMBER;
+use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает 2 числа и оператор. Считает результат выражения.
@@ -40,8 +39,8 @@ function runCalc()
     $rules = 'What is the result of the expression?';
     $getQuestion = function () {
         $operators = ['+', '-', '*'];
-        $randOne = mt_rand(MIN, MAX);
-        $randTwo = mt_rand(MIN, MAX);
+        $randOne = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        $randTwo = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $key = array_rand($operators);
         $randOperator = $operators[$key];
         $question = "$randOne $randOperator $randTwo";

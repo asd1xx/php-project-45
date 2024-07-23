@@ -3,9 +3,8 @@
 namespace App\Games\Even;
 
 use function App\Engine\runGame;
-
-const MIN = 1;
-const MAX = 15;
+use const App\Engine\MIN_RANDOM_NUMBER;
+use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает число и определяет является ли число чётным.
@@ -29,7 +28,7 @@ function runEven()
 {
     $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
     $getQuestion = function () {
-        $question = mt_rand(MIN, MAX);
+        $question = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $correctAnswer = isEven($question);
 
         return [$question, $correctAnswer];

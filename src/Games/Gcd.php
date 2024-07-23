@@ -3,9 +3,8 @@
 namespace App\Games\Gcd;
 
 use function App\Engine\runGame;
-
-const MIN = 1;
-const MAX = 15;
+use const App\Engine\MIN_RANDOM_NUMBER;
+use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает два числа и определяет наибольший общий делитель.
@@ -37,8 +36,8 @@ function runGcd()
 {
     $rules = 'Find the greatest common divisor of given numbers.';
     $getQuestion = function () {
-        $randOne = mt_rand(MIN, MAX);
-        $randTwo = mt_rand(MIN, MAX);
+        $randOne = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+        $randTwo = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $question = "$randOne $randTwo";
         $correctAnswer = getGcd($randOne, $randTwo);
 

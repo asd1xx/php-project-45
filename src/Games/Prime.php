@@ -3,9 +3,8 @@
 namespace App\Games\Prime;
 
 use function App\Engine\runGame;
-
-const MIN = 1;
-const MAX = 15;
+use const App\Engine\MIN_RANDOM_NUMBER;
+use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает число и определяет является ли число простым.
@@ -41,7 +40,7 @@ function runPrime()
 {
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getQuestion = function () {
-        $question = mt_rand(MIN, MAX);
+        $question = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $correctAnswer = isPrime($question);
 
         return [$question, $correctAnswer];
