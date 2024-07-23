@@ -19,14 +19,19 @@ function calculate(int $num1, int $num2, string $operator): int
 {
     switch ($operator) {
         case '+':
-            return $num1 + $num2;
+            $result = $num1 + $num2;
+            break;
         case '-':
-            return $num1 - $num2;
+            $result = $num1 - $num2;
+            break;
         case '*':
-            return $num1 * $num2;
+            $result = $num1 * $num2;
+            break;
         default:
             break;
     }
+
+    return $result;
 }
 
 /**
