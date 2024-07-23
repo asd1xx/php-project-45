@@ -11,21 +11,21 @@ use const App\Engine\MAX_RANDOM_NUMBER;
  * Функция принимает число и определяет является ли число простым.
  * @param int $number
  *
- * @return string возвращает строку 'yes' или 'no'
+ * @return bool возвращает булево значение
  */
-function isPrime(int $number): string
+function isPrime(int $number): bool
 {
     if ($number < 2) {
-        return 'no';
+        return false;
     }
 
     for ($i = 2; $i <= $number / 2; $i++) {
         if ($number % $i === 0) {
-            return 'no';
+            return false;
         }
     }
 
-    return 'yes';
+    return true;
 }
 
 /**
@@ -42,7 +42,7 @@ function runPrime()
     $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
     $getQuestion = function () {
         $question = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-        $correctAnswer = isPrime($question);
+        $correctAnswer = isPrime($question) ? 'yes' : 'no';
 
         return [$question, $correctAnswer];
     };
