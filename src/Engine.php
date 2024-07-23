@@ -27,7 +27,7 @@ function runGame(string $rules, callable $getQuestion): void
 
     $countCorrectAnswers = 0;
 
-    for ($i = 0; $i < COUNT_QUESTIONS; $i++) {
+    for ($i = 1; $i <= COUNT_QUESTIONS; $i++) {
         [$question, $correctAnswer] = $getQuestion();
         line("Question: {$question}");
         $answer = mb_strtolower(prompt('Your answer'));
