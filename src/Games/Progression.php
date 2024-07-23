@@ -13,22 +13,22 @@ const PROGRESSION_SIZE = 10;
 
 /**
  * Функция для получения арифметической прогрессии из 10 чисел.
- * $a - первое случайное число прогрессии от 1 до 15.
- * $d - случайный шаг прогрессии от 2 до 10.
+ * $progressionFirstNumber - первое случайное число прогрессии от 1 до 15.
+ * $progressionStep - случайный шаг прогрессии от 2 до 10.
  *
  * @return array возвращает массив с арифметической прогрессией
  */
 function getProgression(): array
 {
-    $a = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-    $d = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
-    $arr = [$a];
+    $progressionFirstNumber = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+    $progressionStep = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
+    $progression = [$progressionFirstNumber];
 
     for ($i = 1; $i < PROGRESSION_SIZE; $i++) {
-        $arr[$i] = $arr[$i - 1] + $d;
+        $progression[$i] = $progression[$i - 1] + $progressionStep;
     }
 
-    return $arr;
+    return $progression;
 }
 
 /**
