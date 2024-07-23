@@ -11,11 +11,11 @@ use const App\Engine\MAX_RANDOM_NUMBER;
  * Функция принимает число и определяет является ли число чётным.
  * @param int $number
  *
- * @return string возвращает строку 'yes' или 'no'
+ * @return bool возвращает булево значение
  */
-function isEven(int $number): string
+function isEven(int $number): bool
 {
-    return $number % 2 === 0 ? 'yes' : 'no';
+    return $number % 2 === 0;
 }
 
 /**
@@ -30,7 +30,7 @@ function runEven()
     $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
     $getQuestion = function () {
         $question = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
-        $correctAnswer = isEven($question);
+        $correctAnswer = isEven($question) ? 'yes' : 'no';
 
         return [$question, $correctAnswer];
     };
