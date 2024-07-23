@@ -10,23 +10,29 @@ use const App\Engine\MAX_RANDOM_NUMBER;
 const MIN_PROGRESSION_STEP = 2;
 const MAX_PROGRESSION_STEP = 10;
 const PROGRESSION_SIZE = 10;
+const PROGRESSION_END = 150;
+const ARRAY_KEY = 0;
 
 /**
  * Функция для получения арифметической прогрессии из 10 чисел.
- * $progressionFirstNumber - первое случайное число прогрессии от 1 до 15.
+ * $progressionStart - первое случайное число прогрессии от 1 до 15.
  * $progressionStep - случайный шаг прогрессии от 2 до 10.
  *
  * @return array возвращает массив с арифметической прогрессией
  */
 function getProgression(): array
 {
-    $progressionFirstNumber = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+    $progressionStart = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
     $progressionStep = mt_rand(MIN_PROGRESSION_STEP, MAX_PROGRESSION_STEP);
-    $progression = [$progressionFirstNumber];
+    $progressionFull = range($progressionStart, PROGRESSION_END, $progressionStep);
+    $progression = array_slice($progressionFull, ARRAY_KEY, PROGRESSION_SIZE);
 
-    for ($i = 1; $i < PROGRESSION_SIZE; $i++) {
-        $progression[$i] = $progression[$i - 1] + $progressionStep;
-    }
+    // дополнительный способ сгенерировать арифметическую прогрессию
+    // $progression = [$progressionStart];
+
+    // for ($i = 1; $i < PROGRESSION_SIZE; $i++) {
+    //     $progression[$i] = $progression[$i - 1] + $progressionStep;
+    // }
 
     return $progression;
 }
