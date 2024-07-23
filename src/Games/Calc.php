@@ -28,7 +28,7 @@ function calculate(int $num1, int $num2, string $operator): int
             $result = $num1 * $num2;
             break;
         default:
-            break;
+            $result = null;
     }
 
     return $result;
