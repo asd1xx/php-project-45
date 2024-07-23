@@ -3,6 +3,7 @@
 namespace App\Games\Gcd;
 
 use function App\Engine\runGame;
+
 use const App\Engine\MIN_RANDOM_NUMBER;
 use const App\Engine\MAX_RANDOM_NUMBER;
 
