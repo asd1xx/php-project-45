@@ -27,13 +27,6 @@ function getProgression(): array
     $progressionFull = range($progressionStart, PROGRESSION_END, $progressionStep);
     $progression = array_slice($progressionFull, ARRAY_KEY, PROGRESSION_SIZE);
 
-    // дополнительный способ сгенерировать арифметическую прогрессию
-    // $progression = [$progressionStart];
-
-    // for ($i = 1; $i < PROGRESSION_SIZE; $i++) {
-    //     $progression[$i] = $progression[$i - 1] + $progressionStep;
-    // }
-
     return $progression;
 }
 
