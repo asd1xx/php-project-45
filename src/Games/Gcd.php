@@ -12,9 +12,9 @@ use const App\Engine\MAX_RANDOM_NUMBER;
  * @param int $num1
  * @param int $num2
  *
- * @return string возвращает строку с наибольшим общим делителем двух чисел
+ * @return int возвращает наибольший общий делитель двух чисел
  */
-function getGcd(int $num1, int $num2): string
+function getGcd(int $num1, int $num2): int
 {
     while ($num2 !== 0) {
         $temp = $num1 % $num2;
@@ -22,7 +22,7 @@ function getGcd(int $num1, int $num2): string
         $num2 = $temp;
     }
 
-    return (string) $num1;
+    return $num1;
 }
 
 /**
@@ -40,7 +40,7 @@ function runGcd()
         $randOne = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $randTwo = mt_rand(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
         $question = "$randOne $randTwo";
-        $correctAnswer = getGcd($randOne, $randTwo);
+        $correctAnswer = (string) getGcd($randOne, $randTwo);
 
         return [$question, $correctAnswer];
     };
