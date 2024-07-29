@@ -25,8 +25,6 @@ function runGame(string $rules, callable $getQuestion): void
     line("Hello, {$userName}!");
     line($rules);
 
-    $countCorrectAnswers = 0;
-
     for ($i = 1; $i <= COUNT_QUESTIONS; $i++) {
         [$question, $correctAnswer] = $getQuestion();
         line("Question: {$question}");
@@ -34,17 +32,14 @@ function runGame(string $rules, callable $getQuestion): void
 
         if ($correctAnswer === $answer) {
             line('Correct!');
-            $countCorrectAnswers++;
         } else {
             $isWrong = "'%s' is wrong answer ;(. Correct answer was '%s'.\n";
             $tryAgain = "Let's try again, %s!\n";
             echo sprintf($isWrong, $answer, $correctAnswer);
             echo sprintf($tryAgain, $userName);
-            break;
+            return;
         }
     }
-
-    if ($countCorrectAnswers === COUNT_QUESTIONS) {
-        line("Congratulations, {$userName}!");
-    }
+    
+    line("Congratulations, {$userName}!");
 }
