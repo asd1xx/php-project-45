@@ -12,26 +12,19 @@ use const App\Engine\MAX_RANDOM_NUMBER;
  * @param int $num1
  * @param int $num2
  * @param string $operator
- *
- * @return int возвращает результат выражения
  */
-function calculate(int $num1, int $num2, string $operator): int
+function calculate(int $num1, int $num2, string $operator)
 {
     switch ($operator) {
         case '+':
-            $result = $num1 + $num2;
-            break;
+            return $num1 + $num2;
         case '-':
-            $result = $num1 - $num2;
-            break;
+            return $num1 - $num2;
         case '*':
-            $result = $num1 * $num2;
-            break;
+            return $num1 * $num2;
         default:
-            $result = null;
+            break;
     }
-
-    return $result;
 }
 
 /**
