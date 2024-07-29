@@ -7,8 +7,6 @@ use function cli\prompt;
 
 /**
  * Тестовая функция для знакомства с игроком.
- *
- * @return void
  */
 function welcome(): void
 {

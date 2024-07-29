@@ -9,9 +9,6 @@ use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает число и определяет является ли число простым.
- * @param int $number
- *
- * @return bool возвращает булево значение
  */
 function isPrime(int $number): bool
 {
@@ -34,8 +31,6 @@ function isPrime(int $number): bool
  * Нужно ответить является ли число простым.
  * yes - число является простым.
  * no - число не является простым.
- *
- * @return void and calling the engine() function
  */
 function runPrime()
 {

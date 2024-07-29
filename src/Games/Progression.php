@@ -17,8 +17,6 @@ const ARRAY_KEY = 0;
  * Функция для получения арифметической прогрессии из 10 чисел.
  * $progressionStart - первое случайное число прогрессии от 1 до 15.
  * $progressionStep - случайный шаг прогрессии от 2 до 10.
- *
- * @return array возвращает массив с арифметической прогрессией
  */
 function getProgression(): array
 {
@@ -35,8 +33,6 @@ function getProgression(): array
  * Суть игры в следующем: пользователю показывается ряд чисел, образующих
  * арифметическую прогрессию, заменив любое из чисел двумя точками.
  * Игрок должен определить это число.
- *
- * @return void and calling the engine() function
  */
 function runProgression()
 {

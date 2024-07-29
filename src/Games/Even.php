@@ -9,9 +9,6 @@ use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает число и определяет является ли число чётным.
- * @param int $number
- *
- * @return bool возвращает булево значение
  */
 function isEven(int $number): bool
 {
@@ -22,8 +19,6 @@ function isEven(int $number): bool
  * Игра "Проверка на чётность".
  * Суть игры в следующем: пользователю показывается случайное число от 1 до 15.
  * Нужно ответить yes, если число чётное, или no - если нечётное.
- *
- * @return void and calling the engine() function
  */
 function runEven()
 {

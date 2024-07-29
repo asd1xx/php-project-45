@@ -9,9 +9,6 @@ use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает 2 числа и оператор. Считает результат выражения.
- * @param int $num1
- * @param int $num2
- * @param string $operator
  */
 function calculate(int $num1, int $num2, string $operator)
 {
@@ -32,8 +29,6 @@ function calculate(int $num1, int $num2, string $operator)
  * Суть игры в следующем: пользователю показывается случайное
  * математическое выражение с операндами от 1 до 15, например 5 + 10,
  * которое нужно вычислить и записать правильный ответ.
- *
- * @return void and calling the engine() function
  */
 function runCalc()
 {

@@ -9,10 +9,6 @@ use const App\Engine\MAX_RANDOM_NUMBER;
 
 /**
  * Функция принимает два числа и определяет наибольший общий делитель.
- * @param int $num1
- * @param int $num2
- *
- * @return int возвращает наибольший общий делитель двух чисел
  */
 function getGcd(int $num1, int $num2): int
 {
@@ -30,8 +26,6 @@ function getGcd(int $num1, int $num2): int
  * Суть игры в следующем: пользователю показывается
  * два случайных числа от 1 до 15, например, 14 5.
  * Пользователь должен вычислить и ввести наибольший общий делитель этих чисел.
- *
- * @return void and calling the engine() function
  */
 function runGcd()
 {

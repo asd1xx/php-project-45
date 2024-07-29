@@ -11,12 +11,8 @@ const MAX_RANDOM_NUMBER = 15;
 
 /**
  * Общая логика игр реализована в функции engine.
- * @param string $rules
- * @param callable $getQuestion
  * Принимает аргумент $rules с правилами игры.
  * Принимает функцию обратного вызова $getQuestion.
- *
- * @return void
  */
 function runGame(string $rules, callable $getQuestion): void
 {
@@ -40,6 +36,6 @@ function runGame(string $rules, callable $getQuestion): void
             return;
         }
     }
-    
+
     line("Congratulations, {$userName}!");
 }
